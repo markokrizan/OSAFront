@@ -652,12 +652,14 @@ class UserModal{
 				roles.push({"id":3,"roleName":"KOMENTATOR"});
 			//ako ih vec ima, znaci da menja, daj mu njegove
 			}else{
-				roles.push(this.user.roles);
+				//roles.push(this.user.roles);
+				roles = this.user.roles;
 			}
 			this.user.roles = roles;
 		}
 		
-	
+		console.log("Iz prikupi podatke metode:")
+		console.log(this.user);
 
 		
 		
