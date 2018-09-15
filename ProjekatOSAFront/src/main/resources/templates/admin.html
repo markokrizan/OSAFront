@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://v40.pingendo.com/assets/4.0.0/default/theme.css" type="text/css"> </head>
+  <link rel="stylesheet" href="/styles/theme.css" type="text/css">
+  <script type="text/javascript" src="/scripts/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="/scripts/controller.js"></script>
+  <script type="text/javascript" src="/scripts/ajax.js"></script>
+  
+  <script type="text/javascript" src="/scripts/admin.js"></script>
+  <script type="text/javascript" src="/scripts/modal.js"></script>
+  <script type="text/javascript" src="/scripts/authentication.js"></script>
+  
+<body>
+  <div id = "nav"></div>
+	<script>
+	$("#nav").load("http://localhost:8080/nav");
+    </script>
+  <div class="py-5 text-center bg-light" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id = "userImePrezime">Ime i prezime</h1>
+          <p id ="userUloge" class="lead">uloge</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 p-4">
+          <img id = "userSlika" class="img-fluid d-block rounded-circle mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Default_profile_picture_%28male%29_on_Facebook.jpg/600px-Default_profile_picture_%28male%29_on_Facebook.jpg">
+          <p class="my-4">
+            <i id = "userKorisnicko">Korisnicko ime</i>
+          </p>
+          <a class="btn btn-info" id = "btnIzmeniPodatke">Izmeni podatke</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a class="btn w-100 btn-info" id = "btnObjave">Objave</a>
+        </div>
+        <div class="col-md-4">
+          <a class="btn w-100 btn-info" id = "btnKomentari">Komentari</a>
+        </div>
+        <div class="col-md-4">
+          <a class="btn w-100 btn-info" id = "btnKorisnici">Korisnici</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="mx-auto text-center" style="display: inline;">
+               <span id="nazivTabele">Objave</span> &nbsp;&nbsp; </h4>
+              <input id = "pretragaTabele" class="form-control mr-sm-2 w-25" placeholder="Pretrazi" style="display:inline !important;" type="text">
+              <div class="dropdown" style="display: inline;">
+                <button class="btn dropdown-toggle btn-info w-25" type="button" data-toggle="dropdown" aria-haspopup="true" id="dropdownMenuButton" aria-expanded="false"> Sortiraj po </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id = "stavkeSortMenija">
+                  <a class="dropdown-item" href="#">Datumu</a>
+                  <a class="dropdown-item" href="#">Popularnosti</a>
+                </div>
+              </div>
+              <a class="btn navbar-btn ml-2 text-dark btn-info" id = "dodajAdminDugme" >
+                <i class="fa d-inline fa-lg fa-plus-square"></i>&nbsp;</a>
+            </div>
+            <div class="card-body" >
+              <table class="table">
+                <thead id  = "zaglavlje">
+                  <tr>
+                    <th class="w-25">#</th>
+                    <th class="w-25">First Name</th>
+                    <th class="w-25">Last Name</th>
+                    <th class="w-25">Operacije</th>
+                  </tr>
+                </thead>
+                <tbody id = "redovi">
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>
+                      <a class="btn btn-warning" href="#">Izmeni </a>
+                      <a class="btn btn-danger" href="#">Obrisi </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>
+                      <a class="btn btn-warning" href="#">Izmeni </a>
+                      <a class="btn btn-danger" href="#">Obrisi </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>
+                      <a class="btn btn-warning" href="#">Izmeni </a>
+                      <a class="btn btn-danger" href="#">Obrisi </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"> </div>
+      </div>
+    </div>
+  </div>
+  <div id = "modals"></div>
+  <script>
+	$("#modals").load("http://localhost:8080/modals");
+  </script>
+  
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>

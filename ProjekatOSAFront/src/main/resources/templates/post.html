@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://v40.pingendo.com/assets/4.0.0/default/theme.css" type="text/css"> 
+  <script type="text/javascript" src="/scripts/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="/scripts/controller.js"></script>
+  <script type="text/javascript" src="/scripts/ajax.js"></script>
+  <script type="text/javascript" src="/scripts/post.js"></script>
+  <script type="text/javascript" src="/scripts/modal.js"></script>
+  <script type="text/javascript" src="/scripts/authentication.js"></script>
+</head>
+
+<body>
+  <div id = "nav"></div>
+	<script>
+	$("#nav").load("http://localhost:8080/nav");
+  </script>
+  
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id = "naslovPosta" class="display-4">Naslov posta</h1>
+          <p id = "datumPostavljanja" class="lead">Postavljen u:&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 align-self-center">
+          <p id = "opisPosta" class="my-3">Opis posta. Flex setting of this column. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="img-fluid d-block" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" id = postDetails>
+          <a id = "komentarisiBtn" class="btn pull-right btn-lg btn-info">
+            <i class="fa fa-comment"> </i> <span id = "brojKomentara">12</span> </a>
+          <a id = "dislajkujBtn" class="btn pull-right btn-danger btn-lg">
+            <i class="fa fa-thumbs-down"> </i> <span id = "brojDislajkova">21</span> </a>
+          <a id = "lajkujBtn" class="btn pull-right btn-success btn-lg">
+            <i class="fa fa-thumbs-up"> </i> <span id = "brojLajkova">33</span> </a>
+          <!-- 
+          <a class="btn pull-left btn-lg btn-info" href="#"> Tag1 </a>
+          <a class="btn pull-left btn-lg btn-info" href="#"> Tag2 </a>
+           -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle btn-info" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton"> Sortiraj po </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" id = "sortDatumUzlazno">Datumu - uzlazno</a>
+              <a class="dropdown-item" id = "sortDatumSilazno">Datumu - silazno</a>
+              <a class="dropdown-item" id = "sortPopularnostUzlazno" >Popularnosti - uzlazno</a>
+              <a class="dropdown-item" id = "sortPopularnostSilazno" >Popularnosti - silazno</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div  class="card">
+            <div class="card-header"> Komentari:</div>
+            	<div class = "card-body" id = "komentari"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="dropdown">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Datumu</a>
+              <a class="dropdown-item" href="#">Broju komentara</a>
+              <a class="dropdown-item" href="#">Popularnosti</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id = "modals"></div>
+  <script>
+	$("#modals").load("http://localhost:8080/modals");
+  </script>
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

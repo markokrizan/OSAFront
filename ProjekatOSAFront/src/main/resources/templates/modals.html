@@ -1,0 +1,203 @@
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Uloguj se</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="">
+            <div class="form-group">
+              <label></label>
+              <input id = "korisnickoInput" type="text" class="form-control form-control-sm mx-auto w-100" placeholder="Korisniko ime">
+              <small class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label></label>
+              <input id = "lozinkaInput" type="password" class="form-control form-control-sm mx-auto w-100" placeholder="Lozinka"> </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="submitLoginBtn" type="button" class="btn btn-success">Uloguj se&nbsp;</button>
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Odustani</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="registerModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Registracija</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="">
+            <div class="form-group">
+              <input type="text" class="form-control" id = "userInputIme" placeholder="Ime"> </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id = "userInputKorisnicko" placeholder="Korisnicko ime"> </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id = "userInputLozinka" placeholder="Lozinka"> </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id = "userInputURLSlike" placeholder="URL Slike"> </div>
+            <div class="form-group" id = "roleCkeckboxRoleGroup">
+              <div class="form-group">
+                <label>Uloga:</label>
+                <div class="checkbox">
+                  <label >
+                    <input type="checkbox" id = "checkAdmin" value="ADMINISTRATOR"> ADMINISTRATOR</label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" id = "checkObjavljivac" value="OBJAVLJIVAC"> OBJAVLJIVAC</label>
+                </div>
+              </div>
+            </div>
+       
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id = "registerSubmit">Registruj se</button>
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Odustani</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="createPostModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Objavi</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body">
+            <form class="">
+              <div class="form-group">
+                <input type="email" id = "postTitleInput" class="form-control" placeholder="Naslov"> </div>
+              <div class="form-group">
+                <input type="text" id = "postDescriptionInput" class="form-control h-25" placeholder="Tekst"> </div>
+              <div class="form-group" id = "tagFormGroup">
+                <label>Tagovi:</label>
+                <!--  
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="tagCheckbox">Tag 1</label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="tagCheckbox">Tag 2</label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="tagCheckbox">Tag 3</label>
+                </div>
+                -->
+              </div>
+              <div class="form-group">
+                <p class="">Izaberite sliku:</p>
+                <input type="text" id = "postTextInput" class="form-control-file"> </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id = "btnCreatePost" class="btn btn-success">Gotovo</button>
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Odustani</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "komentarisiModal" class="modal fade">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Komentarisi</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body">
+            <form class="">
+              <div class="form-group">
+                <input id = "commentTitleInput" type="email" class="form-control" placeholder="Naslov"> </div>
+              <div class="form-group">
+                <input id = "commentDescriptionInput" type="text" class="form-control h-25" placeholder="Tekst"> </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id = "btnKomentarisi">Objavi komentar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id = "nekompletniPodaciModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Greska!</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Niste uneli sve podatke!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id = "pogresniPodaciModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Greska!</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Uneli ste pogresne podatke!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id = "potvrdiModal" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Da li ste sigurni?</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Ako potvrdite podaci ce biti zauvek obrisani!</p>
+        </div>
+        <div class="modal-footer">
+          <button id = "btnPotvrdiBrisanje" type="button" class="btn btn-danger">Da</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Ne, zatvori</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
