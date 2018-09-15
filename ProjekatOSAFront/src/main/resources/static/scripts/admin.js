@@ -381,7 +381,7 @@ function generisiTabeluObjava(objave){
 		$("#redovi").append(
 				'<tr>'+
 	            '<td>' + objava.id + '</td>'+
-	            '<td><a href = "http://localhost:8081/post/'+ objava.id +'">' + objava.title + '</a></td>'+
+	            '<td><a style="word-wrap: break-word;" href = "http://localhost:8081/post/'+ objava.id +'">' + objava.title + '</a></td>'+
 	            '<td>' + objava.date + '</td>'+
 	            '<td>' + objava.user.username + '</td>'+
 	            '<td>'+

@@ -219,6 +219,7 @@ class PostModal{
 	dodajObjavu(){
 		let self = this;
 		this.prikupiInformacije(function(){
+			
 			sendData(URLCreatePost, "POST", JSON.stringify(self.post)).then(function(respJson){
 			
 				if(window.location.pathname.split("/").pop() === "admin"){
@@ -299,6 +300,8 @@ class PostModal{
 				self.post.dislikes = 0;
 				self.post.date = new Date();
 				self.post.numberOfComments = 0;
+				
+				self.post.tags = [];
 				
 				//tags:
 				$.each($('input[type="checkbox"][value = "tagCheckbox"]'), function(index, item){

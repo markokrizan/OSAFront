@@ -78,6 +78,7 @@ function showPosts(posts){
 			        '<div class="col-md-7 order-1 order-md-2">'+
 			          '<h3>'+ post.title +'</h3>'+
 			          '<p class="my-3 w-100 h-25">'+ post.description +'</p>'+
+			          '<br/>'+
 			          '<div class="row">'+
 			            '<div class="col-md-12">'+
 			              '<a class="btn mx-auto pull-right btn-info" href="http://localhost:8081/post/'+ post.id +'">Detalji</a>'+
