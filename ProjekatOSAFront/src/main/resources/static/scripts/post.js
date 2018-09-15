@@ -25,9 +25,12 @@ $(document).ready(function(){
 	 let naslov = respJson.title;
 	 let opis = respJson.description;
 	 let datum = respJson.date;
+	 
 	 let broj_lajkova = respJson.likes;
 	 let broj_dislajkova = respJson.dislikes;
-	 fillPost(naslov, opis, datum, broj_lajkova, broj_dislajkova);
+	 
+	 let slika = respJson.photo;
+	 fillPost(naslov, opis, datum, broj_lajkova, broj_dislajkova, slika);
 	 fillTags(respJson.tags);
 	 fillBrojKomentara(respJson.comments.length);
 	 fillComments(respJson.comments);
@@ -95,8 +98,9 @@ $(document).ajaxStop(function() {
 });
 */
 
-function fillPost(naslov, opis, datum, broj_lajkova, broj_dislajkova){
+function fillPost(naslov, opis, datum, broj_lajkova, broj_dislajkova, slika){
 	$("#naslovPosta").html(naslov);
+	$("#slikaPosta").attr("src", slika);
 	$("#opisPosta").html(opis);
 	$("#datumPostavljanja").append(datum);
   	$("#brojDislajkova").html(broj_dislajkova);

@@ -66,7 +66,7 @@ $(document).ready(function(){
 });
 
 
-
+//https://pingendo.com/assets/photos/wireframe/photo-1.jpg
 function showPosts(posts){
 	$("#posts").empty();
 	$.each(posts, function (index, post) {
@@ -74,7 +74,7 @@ function showPosts(posts){
 			    '<div class="container">'+
 			      '<div class="row">'+
 			        '<div class="col-md-5 order-2 order-md-1">'+
-			          '<img class="img-fluid d-block" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg"> </div>'+
+			          '<img class="img-fluid d-block" src="'+ post.photo +'"> </div>'+
 			        '<div class="col-md-7 order-1 order-md-2">'+
 			          '<h3>'+ post.title +'</h3>'+
 			          '<p class="my-3 w-100 h-25">'+ post.description +'</p>'+
