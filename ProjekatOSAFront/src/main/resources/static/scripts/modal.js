@@ -215,7 +215,7 @@ class PostModal{
 		this.modal.modal('hide');
 	}
 	
-	
+	//https://pingendo.com/assets/photos/wireframe/photo-1.jpg
 	dodajObjavu(){
 		let self = this;
 		this.prikupiInformacije(function(){
@@ -274,7 +274,15 @@ class PostModal{
 		if (this.operacija === "izmena"){		
 			self.post.title = $("#postTitleInput").val();
 			self.post.description = $("#postDescriptionInput").val();
-			self.post.photo = $("#postTextInput").val();
+			
+			if($("#postTextInput").val() === "default"){
+				self.post.photo = "https://pingendo.com/assets/photos/wireframe/photo-1.jpg";
+			}else{
+				self.post.photo = $("#postTextInput").val();
+			}
+			
+			
+			
 			
 			//tags:
 			$.each($('input[type="checkbox"][value = "tagCheckbox"]'), function(index, item){
@@ -616,7 +624,16 @@ class UserModal{
 		this.user.name = $("#userInputIme").val();
 		this.user.username = $("#userInputKorisnicko").val();
 		this.user.password = $("#userInputLozinka").val();
-		this.user.photo = $("#userInputURLSlike").val();
+		
+		
+		//https://eliaslealblog.files.wordpress.com/2014/03/user-200.png
+		if($("#userInputURLSlike").val() === "default"){
+			this.user.photo = "https://eliaslealblog.files.wordpress.com/2014/03/user-200.png";
+		}else{
+			this.user.photo = $("#userInputURLSlike").val();
+		}
+		
+		
 		
 		/*
 		//---------------------------------------------

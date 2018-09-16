@@ -370,10 +370,10 @@ function generisiTabeluObjava(objave){
 	$("#zaglavlje").html(
 			'<tr>'+
             '<th class="w-20">ID</th>'+
-            '<th class="w-20">Naslov</th>'+
-            '<th class="w-20">Postavljena</th>'+
-            '<th class="w-20">Postavio</th>'+
-            '<th class="w-20">Operacije</th>'+
+            '<th class="w-25">Naslov</th>'+
+            '<th class="w-25">Postavljena</th>'+
+            '<th class="w-25">Postavio</th>'+
+            '<th class="w-25">Operacije</th>'+
           '</tr>'
 	);
 	$("#redovi").empty();
